@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_chicken": {
+    "has_kelp": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:chicken"
+            "items": "minecraft:kelp"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:cooked_chicken_from_smoking_chicken"
+        "recipe": "minecraft:dried_kelp_from_smoking"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_chicken"
+      "has_kelp"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:cooked_chicken_from_smoking_chicken"
+      "minecraft:dried_kelp_from_smoking"
     ]
   }
 }

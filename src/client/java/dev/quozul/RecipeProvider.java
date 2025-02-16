@@ -2,11 +2,13 @@ package dev.quozul;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.data.recipe.CookingRecipeJsonBuilder;
 import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.data.recipe.RecipeGenerator;
 import net.minecraft.data.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
+import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.SmokingRecipe;
 import net.minecraft.recipe.book.RecipeCategory;
@@ -133,19 +135,22 @@ public class RecipeProvider extends FabricRecipeProvider {
         }
 
         private void food() {
-            offerSmoking(List.of(Items.POTATO), RecipeCategory.MISC, Items.BAKED_POTATO, 0.35f, 200, "baked_potato");
-            offerSmoking(List.of(Items.BEEF), RecipeCategory.MISC, Items.COOKED_BEEF, 0.35f, 200, "cooked_beef");
-            offerSmoking(List.of(Items.CHICKEN), RecipeCategory.MISC, Items.COOKED_CHICKEN, 0.35f, 200, "cooked_chicken");
-            offerSmoking(List.of(Items.COD), RecipeCategory.MISC, Items.COOKED_COD, 0.35f, 200, "cooked_cod");
-            offerSmoking(List.of(Items.MUTTON), RecipeCategory.MISC, Items.COOKED_MUTTON, 0.35f, 200, "cooked_mutton");
-            offerSmoking(List.of(Items.PORKCHOP), RecipeCategory.MISC, Items.COOKED_PORKCHOP, 0.35f, 200, "cooked_porkchop");
-            offerSmoking(List.of(Items.RABBIT), RecipeCategory.MISC, Items.COOKED_RABBIT, 0.35f, 200, "cooked_rabbit");
-            offerSmoking(List.of(Items.SALMON), RecipeCategory.MISC, Items.COOKED_SALMON, 0.35f, 200, "cooked_salmon");
-            offerSmoking(List.of(Items.KELP), RecipeCategory.MISC, Items.DRIED_KELP, 0.1f, 200, "dried_kelp");
+            offerSmoking(Items.POTATO, RecipeCategory.MISC, Items.BAKED_POTATO, 0.35f, 200, "baked_potato");
+            offerSmoking(Items.BEEF, RecipeCategory.MISC, Items.COOKED_BEEF, 0.35f, 200, "cooked_beef");
+            offerSmoking(Items.CHICKEN, RecipeCategory.MISC, Items.COOKED_CHICKEN, 0.35f, 200, "cooked_chicken");
+            offerSmoking(Items.COD, RecipeCategory.MISC, Items.COOKED_COD, 0.35f, 200, "cooked_cod");
+            offerSmoking(Items.MUTTON, RecipeCategory.MISC, Items.COOKED_MUTTON, 0.35f, 200, "cooked_mutton");
+            offerSmoking(Items.PORKCHOP, RecipeCategory.MISC, Items.COOKED_PORKCHOP, 0.35f, 200, "cooked_porkchop");
+            offerSmoking(Items.RABBIT, RecipeCategory.MISC, Items.COOKED_RABBIT, 0.35f, 200, "cooked_rabbit");
+            offerSmoking(Items.SALMON, RecipeCategory.MISC, Items.COOKED_SALMON, 0.35f, 200, "cooked_salmon");
+            offerSmoking(Items.KELP, RecipeCategory.MISC, Items.DRIED_KELP, 0.1f, 200, "dried_kelp");
         }
 
-        private void offerSmoking(List<ItemConvertible> inputs, RecipeCategory category, ItemConvertible output, float experience, int cookingTime, String group) {
-            this.offerMultipleOptions(RecipeSerializer.SMOKING, SmokingRecipe::new, inputs, category, output, experience, cookingTime, group, "_from_smoking");
+        private void offerSmoking(ItemConvertible itemConvertible, RecipeCategory category, ItemConvertible output, float experience, int cookingTime, String group) {
+            CookingRecipeJsonBuilder.create(Ingredient.ofItem(itemConvertible), category, output, experience, cookingTime, RecipeSerializer.SMOKING, SmokingRecipe::new)
+                    .group(group)
+                    .criterion(hasItem(itemConvertible), this.conditionsFromItem(itemConvertible))
+                    .offerTo(this.exporter, getItemPath(output) + "_from_smoking");
         }
 
         private void finishToolBuilder(ShapedRecipeJsonBuilder builder) {

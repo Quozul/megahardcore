@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_potato": {
+    "has_beef": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:potato"
+            "items": "minecraft:beef"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:baked_potato_from_smoking_potato"
+        "recipe": "minecraft:cooked_beef_from_smoking"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_potato"
+      "has_beef"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:baked_potato_from_smoking_potato"
+      "minecraft:cooked_beef_from_smoking"
     ]
   }
 }
