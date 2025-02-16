@@ -4,6 +4,7 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "CampfireBlockMixin",
+    "LivingEntityMixin",
     "PlayerAdvancementTrackerMixin",
     "ServerPlayerEntityMixin",
     "ServerRecipeManagerMixin",

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.35,
+  "group": "cooked_salmon",
+  "ingredient": "minecraft:salmon",
+  "result": {
+    "id": "minecraft:cooked_salmon"
+  }
+}
