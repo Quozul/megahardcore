@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "dev.quozul.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "CampfireBlockMixin",
+    "PlayerAdvancementTrackerMixin",
+    "ServerPlayerEntityMixin",
+    "ServerRecipeManagerMixin",
+    "StatHandlerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
