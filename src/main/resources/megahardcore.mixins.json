@@ -8,7 +8,9 @@
     "PlayerAdvancementTrackerMixin",
     "ServerPlayerEntityMixin",
     "ServerRecipeManagerMixin",
-    "StatHandlerMixin"
+    "ServerWorldMixin",
+    "StatHandlerMixin",
+    "ZombieEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1
