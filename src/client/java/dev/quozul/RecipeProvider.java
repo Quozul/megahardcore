@@ -77,13 +77,13 @@ public class RecipeProvider extends FabricRecipeProvider {
                     .pattern(" s "));
 
             // Axe
-            finishToolBuilder(createShaped(RecipeCategory.COMBAT, Items.STONE_AXE)
+            finishToolBuilder(createShaped(RecipeCategory.TOOLS, Items.STONE_AXE)
                     .pattern("ff")
-                    .pattern("sf")
-                    .pattern("s "));
+                    .pattern("fs")
+                    .pattern(" s"));
 
             // Hoe
-            finishToolBuilder(createShaped(RecipeCategory.COMBAT, Items.STONE_HOE)
+            finishToolBuilder(createShaped(RecipeCategory.TOOLS, Items.STONE_HOE)
                     .pattern("ff")
                     .pattern(" s")
                     .pattern(" s"));
@@ -156,8 +156,6 @@ public class RecipeProvider extends FabricRecipeProvider {
         private void finishToolBuilder(ShapedRecipeJsonBuilder builder) {
             builder.input('s', Items.STICK)
                     .input('f', Items.FLINT)
-                    .group("multi_bench")
-                    .criterion(hasItem(Items.STICK), conditionsFromItem(Items.STICK))
                     .criterion(hasItem(Items.FLINT), conditionsFromItem(Items.FLINT))
                     .offerTo(exporter);
         }

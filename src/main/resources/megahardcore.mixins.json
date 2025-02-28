@@ -3,6 +3,7 @@
   "package": "dev.quozul.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "CampfireBlockEntityMixin",
     "CampfireBlockMixin",
     "LivingEntityMixin",
     "PlayerAdvancementTrackerMixin",

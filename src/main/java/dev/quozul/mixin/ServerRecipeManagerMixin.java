@@ -27,7 +27,13 @@ public class ServerRecipeManagerMixin {
     @Inject(method = "apply(Lnet/minecraft/recipe/PreparedRecipes;Lnet/minecraft/resource/ResourceManager;Lnet/minecraft/util/profiler/Profiler;)V", at = @At("RETURN"))
     private void onApply(PreparedRecipes preparedRecipes, ResourceManager resourceManager, Profiler profiler, CallbackInfo ci) {
         List<Identifier> recipesToRemove = List.of(
-                Identifier.of("minecraft", "netherite_upgrade_smithing_template")
+                Identifier.of("minecraft", "netherite_upgrade_smithing_template"),
+                Identifier.of("minecraft", "stone_axe"),
+                Identifier.of("minecraft", "stone_hoe"),
+                Identifier.of("minecraft", "stone_pickaxe"),
+                Identifier.of("minecraft", "stone_pickaxe"),
+                Identifier.of("minecraft", "stone_shovel"),
+                Identifier.of("minecraft", "stone_sword")
         );
 
         List<RecipeEntry<?>> filtered = this.preparedRecipes.recipes().stream()

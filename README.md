@@ -1,6 +1,6 @@
-# Harder Hardcore
+# Mega Hardcore
 
-Mega Hard Core is a mod that makes the game significantly harder and longer.  
+Mega Hardcore is a mod that makes the game significantly harder and longer.  
 The name of the mod may change later, I don't have much inspiration.
 
 ## Features
@@ -29,9 +29,12 @@ The name of the mod may change later, I don't have much inspiration.
 - Advancements progress, unlocked recipes, statistics are deleted on player death
 - Ender chest inventory is cleared on death
 
-## Planned features
+### Blocks
 
 - Campfire gives regeneration effect
+
+## Planned features
+
 - Loose one heart on death, banned when no hearts are left
 - Make monsters spawn below light level 7 (instead of 0)
 - Enchantments requires up to 30 levels of experience
