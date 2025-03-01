@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_kelp": {
+    "has_cod": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:kelp"
+            "items": "minecraft:cod"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:dried_kelp_from_smoking"
+        "recipe": "megahardcore:cooked_cod_from_smoking"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_kelp"
+      "has_cod"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:dried_kelp_from_smoking"
+      "megahardcore:cooked_cod_from_smoking"
     ]
   }
 }

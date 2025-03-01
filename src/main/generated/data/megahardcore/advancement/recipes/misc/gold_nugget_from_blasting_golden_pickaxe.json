@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:gold_nugget_from_blasting_golden_pickaxe"
+        "recipe": "megahardcore:gold_nugget_from_blasting_golden_pickaxe"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:gold_nugget_from_blasting_golden_pickaxe"
+      "megahardcore:gold_nugget_from_blasting_golden_pickaxe"
     ]
   }
 }

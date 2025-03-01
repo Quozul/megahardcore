@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:iron_nugget_from_blasting_iron_boots"
+        "recipe": "megahardcore:iron_nugget_from_blasting_iron_boots"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:iron_nugget_from_blasting_iron_boots"
+      "megahardcore:iron_nugget_from_blasting_iron_boots"
     ]
   }
 }

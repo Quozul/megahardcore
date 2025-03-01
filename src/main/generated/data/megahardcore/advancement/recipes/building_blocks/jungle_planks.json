@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:jungle_planks"
+        "recipe": "megahardcore:jungle_planks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:jungle_planks"
+      "megahardcore:jungle_planks"
     ]
   }
 }

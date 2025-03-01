@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_porkchop": {
+    "has_kelp": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:porkchop"
+            "items": "minecraft:kelp"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:cooked_porkchop_from_smoking"
+        "recipe": "megahardcore:dried_kelp_from_smoking"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_porkchop"
+      "has_kelp"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:cooked_porkchop_from_smoking"
+      "megahardcore:dried_kelp_from_smoking"
     ]
   }
 }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:dark_oak_planks"
+        "recipe": "megahardcore:dark_oak_planks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:dark_oak_planks"
+      "megahardcore:dark_oak_planks"
     ]
   }
 }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:mangrove_planks"
+        "recipe": "megahardcore:mangrove_planks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:mangrove_planks"
+      "megahardcore:mangrove_planks"
     ]
   }
 }
